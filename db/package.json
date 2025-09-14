@@ -1,0 +1,21 @@
+{
+  "name": "db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "seed:db": "pnpm run build && node ./dist/seed_db.js",
+    "corn":"pnpm run build && node ./dist/corn.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0",
+  "dependencies": {
+    "@types/pg": "^8.15.5",
+    "node-cron": "^4.2.1",
+    "pg": "^8.16.3"
+  }
+}
