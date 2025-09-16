@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Trading Platform Design System - Professional Dark Theme */
+
+@layer base {
+  :root {
+    /* Trading Platform Dark Theme */
+    --background: 218 23% 8%;
+    --foreground: 220 15% 90%;
+
+    --card: 218 25% 10%;
+    --card-foreground: 220 15% 88%;
+
+    --popover: 218 25% 12%;
+    --popover-foreground: 220 15% 90%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 220 15% 5%;
+
+    --secondary: 218 25% 15%;
+    --secondary-foreground: 220 15% 85%;
+
+    --muted: 218 25% 12%;
+    --muted-foreground: 220 15% 65%;
+
+    --accent: 217 32% 17%;
+    --accent-foreground: 220 15% 85%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 15% 95%;
+
+    --border: 218 25% 18%;
+    --input: 218 25% 15%;
+    --ring: 142 76% 36%;
+
+    /* Trading specific colors */
+    --success: 142 76% 36%;
+    --success-foreground: 220 15% 5%;
+    --danger: 0 84% 60%;
+    --danger-foreground: 220 15% 95%;
+    --warning: 45 93% 58%;
+    --warning-foreground: 220 15% 5%;
+
+    /* Market colors */
+    --buy-color: 142 76% 36%;
+    --sell-color: 0 84% 60%;
+    --neutral-color: 220 15% 65%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(142 76% 28%));
+    --gradient-danger: linear-gradient(135deg, hsl(var(--danger)), hsl(0 84% 50%));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(218 25% 12%));
+
+    /* Shadows and effects */
+    --shadow-trading: 0 8px 32px -8px hsl(218 23% 4% / 0.8);
+    --glow-buy: 0 0 20px hsl(var(--buy-color) / 0.3);
+    --glow-sell: 0 0 20px hsl(var(--sell-color) / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s ease-out;
+
+    --radius: 0.5rem;
+
+    /* Sidebar colors for trading platform */
+    --sidebar-background: 218 25% 9%;
+    --sidebar-foreground: 220 15% 85%;
+    --sidebar-primary: 142 76% 36%;
+    --sidebar-primary-foreground: 220 15% 5%;
+    --sidebar-accent: 218 25% 12%;
+    --sidebar-accent-foreground: 220 15% 85%;
+    --sidebar-border: 218 25% 18%;
+    --sidebar-ring: 142 76% 36%;
+  }
+
+  /* Custom trading platform utilities */
+  .price-up {
+    color: hsl(var(--buy-color));
+    background: hsl(var(--buy-color) / 0.1);
+  }
+
+  .price-down {
+    color: hsl(var(--sell-color));
+    background: hsl(var(--sell-color) / 0.1);
+  }
+
+  .chart-container {
+    background: linear-gradient(135deg, hsl(var(--card)), hsl(218 25% 8%));
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius);
+  }
+
+  .trading-card {
+    background: var(--gradient-card);
+    backdrop-filter: blur(8px);
+    border: 1px solid hsl(var(--border) / 0.5);
+    box-shadow: var(--shadow-trading);
+  }
+
+  .glow-buy {
+    box-shadow: var(--glow-buy);
+  }
+
+  .glow-sell {
+    box-shadow: var(--glow-sell);
+  }
+
+  /* Number formatting for trading */
+  .mono-numbers {
+    font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
